@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>City Temperature Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="left-panel">
+        <h1>City Temperature Explorer</h1>
+<form onsubmit="calculate()">
+    <div class="input-group">
+  <label><strong>Select Unit</strong></label>
+  <div class="unit-segment">
+    <label class="segment">
+      <input type="radio" name="unit" value="C" id="celsius" checked>
+      <span class="seg-label">Celsius (°C)</span>
+    </label>
+    <label class="segment">
+      <input type="radio" name="unit" value="F" id="fahrenheit">
+      <span class="seg-label">Fahrenheit (°F)</span>
+    </label>
+    <label class="segment">
+      <input type="radio" name="unit" value="K" id="kelvin">
+      <span class="seg-label">Kelvin (K)</span>
+    </label>
+  </div>
+</div>
+        <br>
+        <div class="input-group">
+            <label for="temperature"><strong>Enter Temperature</strong></label>
+            <input type="number" id="temperature" placeholder="Enter Temperature in Celsius">
+            <div class="input-group-result">
+                <span id="unitLabel1">°C</span>
+                <span id="unitLabel2">°F</span>
+                <span id="unitLabel3">°K</span>
+            </div>
+            <p id="temperror" class="error"></p>
+        </div>
+
+        <br>
+        <div class="input-group">
+            <label for="city"><strong>Select a City</strong></label>
+            <select id="city">
+                <option value="">-- Select City --</option>
+                <option>Chennai</option>
+                <option>Mumbai</option>
+                <option>Delhi</option>
+                <option>Bangalore</option>
+                <option>Hyderabad</option>
+                <option>Kolkata</option>
+                <option>Pune</option>
+                <option>Ahmedabad</option>
+                <option>Jaipur</option>
+                <option>Kochi</option>
+            </select>
+            <p id="cityerror" class="error"></p>
+        </div>
+
+        <br>
+        <input type="submit" value="Calculate" id="calculateBtn"/>
+</form>
+    </div>
+    <div class="right-panel" id="rightPanel">
+        <div class="highlight-section" id="highlightSection">
+        </div>
+        <div class="other-cities">
+            <h3>Other Cities</h3>
+            <div class="city-container" id="cityContainer">
+                <div class="city-card" data-city="Chennai">
+                    <h4>Chennai</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Mumbai">
+                    <h4>Mumbai</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Delhi">
+                    <h4>Delhi</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Bangalore">
+                    <h4>Bangalore</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Hyderabad">
+                    <h4>Hyderabad</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Kolkata">
+                    <h4>Kolkata</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Pune">
+                    <h4>Pune</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Ahmedabad">
+                    <h4>Ahmedabad</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Jaipur">
+                    <h4>Jaipur</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+                <div class="city-card" data-city="Kochi">
+                    <h4>Kochi</h4>
+                    <p class="city-temp">-- °C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
